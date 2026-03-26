@@ -1,0 +1,44 @@
+# DankMaterialShell plugins
+DankMaterialShell/.config/DankMaterialShell/plugins/
+DankMaterialShell/.config/DankMaterialShell/clsettings*
+DankMaterialShell/.config/DankMaterialShell/.*
+DankMaterialShell/.config/DankMaterialShell/plugins/
+
+# =========================
+#  CACHE / TEMP FILES
+# =========================
+.cache/
+.local/share/
+
+# =========================
+#  SYSTEM / RANDOM
+# =========================
+*.log
+*.tmp
+.DS_Store
+
+# =========================
+#  SECRETS
+# =========================
+.env
+*.key
+*.pem
+
+# =========================
+# FISH SHELL
+# =========================
+
+fish/.config/fish/fish_variables*
+fish/.config/fish/functions/tide/
+fish/.config/fish/functions/_tide_*
+fish/.config/fish/functions/_fake_tide_*
+fish/.config/fish/functions/fisher.fish
+fish/.config/fish/functions/nvm.fish
+fish/.config/fish/functions/tide.fish
+
+
+# =========================
+#  NIRI
+# =========================
+
+niri/.config/niri/config.kdl.backup*

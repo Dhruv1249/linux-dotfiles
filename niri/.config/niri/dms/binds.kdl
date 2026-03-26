@@ -1,0 +1,12 @@
+binds {
+    Super+Alt+I hotkey-overlay-title="Settings: Open" { spawn "dms" "ipc" "call" "settings" "open"; }
+    Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
+    Super+V hotkey-overlay-title="Clipboard: Toggle" { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
+    Super+Shift+T hotkey-overlay-title="Toggle Tabbed" { toggle-column-tabbed-display; }
+    Super+X { center-column; }
+    Ctrl+Shift+Escape { spawn "foot" "-e" "fish" "-ic" "btop"; }
+    Super+C hotkey-overlay-title="Open code editor" { spawn "code"; }
+    Super+E { spawn "thunar"; }
+    Super+S { spawn "spotify"; }
+    Super+space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+}

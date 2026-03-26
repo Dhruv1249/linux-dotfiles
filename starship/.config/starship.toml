@@ -1,0 +1,247 @@
+add_newline = false
+continuation_prompt = "[▸▹ ](dimmed white)"
+
+format = """
+[](#1793D1)[  ](bg:#1793D1 fg:#ffffff bold)[](fg:#1793D1 bg:#4c566a)[$directory](bg:#4c566a fg:#88c0d0 bold)[](fg:#4c566a bg:#5e81ac)$git_branch$git_status[](fg:#5e81ac)$cmd_duration$jobs$fill[](#3b4252)[$time](bg:#3b4252 fg:#e5e9f0 bold)[](#3b4252)
+$character"""
+
+right_format = """
+$singularity\
+$kubernetes\
+$vcsh\
+$fossil_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$crystal\
+$status\
+$os\
+$battery"""
+
+[fill]
+symbol = "·"
+style = "dimmed bright-black"
+
+[character]
+format = "$symbol "
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](italic dimmed green)"
+
+[username]
+style_user = "bright-yellow bold"
+style_root = "red bold"
+format = "[$user]($style) "
+disabled = false
+
+[sudo]
+format = "[ ]($style)"
+style = "bold red"
+disabled = false
+
+[directory]
+home_symbol = "~"
+read_only = " "
+truncation_length = 3
+style = "bg:#4c566a fg:#88c0d0 bold"
+format = "[$path](bg:#4c566a fg:#88c0d0 bold)"
+
+[git_branch]
+symbol = " "
+style = "bg:#5e81ac fg:#ebcb8b bold"
+format = "[ $symbol$branch](bg:#5e81ac fg:#ebcb8b bold)"
+
+[git_status]
+style = "bg:#5e81ac fg:#bf616a bold"
+format = "[$all_status$ahead_behind ](bg:#5e81ac fg:#bf616a bold)"
+staged     = " "
+modified   = " "
+untracked  = " "
+deleted    = " "
+renamed    = " "
+conflicted = " "
+stashed    = " "
+ahead      = "⇡"
+behind     = "⇣"
+diverged   = "⇕"
+
+[git_metrics]
+format = "[ $added $deleted ](bg:#5e81ac fg:#a3be8c bold)"
+disabled = false
+
+[time]
+disabled = false
+time_format = "%I:%M:%S %p"
+style = "bg:#3b4252 fg:#d8dee9 bold"
+format = "[$time](bg:#3b4252 fg:#d8dee9 bold)"
+
+[cmd_duration]
+format = "[ $duration](italic yellow)"
+
+[jobs]
+symbol = " "
+format = "[$symbol$number]($style)"
+style = "blue"
+
+[battery]
+format = "[ $percentage]($style)"
+[[battery.display]]
+threshold = 20
+style = "red bold"
+
+[nodejs]
+symbol = " "
+format = "[ $symbol($version)](bold green)"
+
+[python]
+symbol = " "
+format = "[ $symbol($version)(($virtualenv))](bold yellow)"
+
+[rust]
+symbol = " "
+format = "[ $symbol($version)](bold red)"
+
+[golang]
+symbol = " "
+format = "[ $symbol($version)](bold cyan)"
+
+[java]
+symbol = " "
+format = "[ $symbol($version)](bold red)"
+
+[lua]
+symbol = " "
+format = "[ $symbol($version)](bold blue)"
+
+[package]
+symbol = " "
+format = "[ $symbol$version](bold yellow)"
+
+[docker_context]
+symbol = " "
+format = "[ $symbol$context](bold blue)"
+
+[conda]
+symbol = " "
+format = "[ $symbol$environment](bold green)"
+
+[aws]
+symbol = " "
+format = "[ $symbol($profile)(/$region)]($style)"
+
+[dart]
+symbol = " "
+format = "[ $symbol($version)](bold cyan)"
+
+[elixir]
+symbol = " "
+format = "[ $symbol($version)](bold purple)"
+
+[elm]
+symbol = " "
+format = "[ $symbol($version)](bold cyan)"
+
+[haskell]
+symbol = " "
+format = "[ $symbol($version)](bold purple)"
+
+[kotlin]
+symbol = " "
+format = "[ $symbol($version)](bold blue)"
+
+[nim]
+symbol = " "
+format = "[ $symbol($version)](bold yellow)"
+
+[perl]
+symbol = " "
+format = "[ $symbol($version)](bold blue)"
+
+[php]
+symbol = " "
+format = "[ $symbol($version)](bold purple)"
+
+[ruby]
+symbol = " "
+format = "[ $symbol($version)](bold red)"
+
+[scala]
+symbol = " "
+format = "[ $symbol($version)](bold red)"
+
+[swift]
+symbol = " "
+format = "[ $symbol($version)](bold yellow)"
+
+[terraform]
+symbol = " "
+format = "[ $symbol$workspace]($style)"
+
+[zig]
+symbol = " "
+format = "[ $symbol($version)](bold yellow)"
+
+[c]
+symbol = " "
+format = "[ $symbol($version(-$name))](bold blue)"
+
+[memory_usage]
+symbol = " "
+format = "[ $symbol${ram}]($style)"
+disabled = false
+threshold = 75

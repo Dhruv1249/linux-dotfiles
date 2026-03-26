@@ -1,0 +1,17 @@
+{
+  "wallpaperCarousel": {
+    "enabled": true
+  },
+  "mpvpaperWallpaper": {
+    "enabled": true
+  },
+  "dockerManager": {
+    "enabled": true
+  },
+  "wallpaperDiscovery": {
+    "enabled": true,
+    "api_pexels": "UD7mL37WEAwYk3TrtdfY3t1YDdmPeiifPFAgj4BH7ZrQyepxg7ezXvXH",
+    "api_unsplash": "mkX-vtKLPWg2yzcCxL3mUZ50pLO7_4jV8-LPzj6ItuM",
+    "lastWallpaperUsed": "pexels"
+  }
+}
