@@ -1,20 +1,15 @@
 return {
-	"nvimtools/none-ls.nvim",
-	dependencies = {
-		"nvimtools/none-ls-extras.nvim",
-		"jayp0521/mason-null-ls.nvim", -- Bridges Mason with none-ls
-	},
+	"stevearc/conform.nvim",
+	event = { "BufReadPre", "BufNewFile" },
+
 	config = function()
-		local null_ls = require("null-ls")
-		local formatting = null_ls.builtins.formatting
-		local diagnostics = null_ls.builtins.diagnostics
+		local conform = require("conform")
 
 		-- =========================
-		-- Global toggle (OFF by default)
+		-- Global toggle
 		-- =========================
 		vim.g.format_on_save = false
 
-		-- Toggle keymap
 		vim.keymap.set("n", "<leader>tf", function()
 			vim.g.format_on_save = not vim.g.format_on_save
 			if vim.g.format_on_save then
@@ -24,71 +19,68 @@ return {
 			end
 		end, { desc = "Toggle format on save" })
 
-		-- Manual format keymap
+		-- =========================
+		-- Manual format
+		-- =========================
 		vim.keymap.set("n", "<leader>f", function()
-			vim.lsp.buf.format({
-				filter = function(c)
-					return c.name == "null-ls"
-				end,
+			conform.format({
+				async = true,
+				lsp_fallback = false, -- IMPORTANT: only use formatters
 			})
-		end, { desc = "Format buffer (null-ls)" })
+		end, { desc = "Format buffer" })
 
 		-- =========================
-		-- 1. Setup Mason-Null-LS
+		-- Conform setup
 		-- =========================
-		require("mason-null-ls").setup({
-			ensure_installed = {
-				"prettier",
-				"stylua",
-				"black",
-				"isort",
-				"pylint",
-				"eslint_d",
-			},
-			automatic_installation = true,
-		})
+		conform.setup({
+			formatters_by_ft = {
+				-- Lua
+				lua = { "stylua" },
 
-		-- =========================
-		-- 2. Setup None-LS
-		-- =========================
-		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+				-- Python
+				python = { "isort", "black" },
 
-		null_ls.setup({
-			sources = {
-				-- Formatters
-				formatting.stylua,
-				formatting.prettier,
-				formatting.black,
-				formatting.isort,
+				-- Web
+				javascript = { "prettier" },
+				typescript = { "prettier" },
+				javascriptreact = { "prettier" },
+				typescriptreact = { "prettier" },
+				html = { "prettier" },
+				css = { "prettier" },
+				json = { "prettier" },
+				yaml = { "prettier" },
 
-				-- Linters
-				diagnostics.pylint,
-				require("none-ls.diagnostics.eslint_d"),
+				-- Rust
+				rust = { "rustfmt" },
+
+				-- Shell
+				sh = { "shfmt" },
+				bash = { "shfmt" },
+
+				-- Docker
+				dockerfile = { "prettier" },
+
+				-- Terraform
+				terraform = { "terraform_fmt" },
+
+        -- Toml
+				toml = { "taplo" },
+
+        -- Markdown
+				markdown = { "prettier" },
 			},
 
 			-- =========================
-			-- 3. Format on Save (Conditional)
+			-- Format on save
 			-- =========================
-			on_attach = function(client, bufnr)
-				if client.supports_method("textDocument/formatting") then
-					vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-					vim.api.nvim_create_autocmd("BufWritePre", {
-						group = augroup,
-						buffer = bufnr,
-						callback = function()
-							if not vim.g.format_on_save then
-								return
-							end
-							vim.lsp.buf.format({
-								bufnr = bufnr,
-								-- Only use null-ls for formatting (prevents conflicts with tsserver etc.)
-								filter = function(c)
-									return c.name == "null-ls"
-								end,
-							})
-						end,
-					})
+			format_on_save = function(bufnr)
+				if not vim.g.format_on_save then
+					return
 				end
+				return {
+					timeout_ms = 500,
+					lsp_fallback = false,
+				}
 			end,
 		})
 	end,
