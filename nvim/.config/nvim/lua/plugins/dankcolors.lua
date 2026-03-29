@@ -6,32 +6,32 @@ return {
 			require('base16-colorscheme').setup({
 				base00 = '#141318',
 				base01 = '#141318',
-				base02 = '#9b99a5',
-				base03 = '#9b99a5',
-				base04 = '#f2efff',
-				base05 = '#f9f8ff',
-				base06 = '#f9f8ff',
-				base07 = '#f9f8ff',
+				base02 = '#9c99a5',
+				base03 = '#9c99a5',
+				base04 = '#f3efff',
+				base05 = '#faf8ff',
+				base06 = '#faf8ff',
+				base07 = '#faf8ff',
 				base08 = '#ff9fb3',
 				base09 = '#ff9fb3',
-				base0A = '#d3c6ff',
+				base0A = '#d4c6ff',
 				base0B = '#a5ffb8',
 				base0C = '#e8e1ff',
-				base0D = '#d3c6ff',
+				base0D = '#d4c6ff',
 				base0E = '#dbd0ff',
 				base0F = '#dbd0ff',
 			})
 
 			vim.api.nvim_set_hl(0, 'Visual', {
-				bg = '#9b99a5',
-				fg = '#f9f8ff',
+				bg = '#9c99a5',
+				fg = '#faf8ff',
 				bold = true
 			})
 			vim.api.nvim_set_hl(0, 'Statusline', {
-				bg = '#d3c6ff',
+				bg = '#d4c6ff',
 				fg = '#141318',
 			})
-			vim.api.nvim_set_hl(0, 'LineNr', { fg = '#9b99a5' })
+			vim.api.nvim_set_hl(0, 'LineNr', { fg = '#9c99a5' })
 			vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#e8e1ff', bold = true })
 
 			vim.api.nvim_set_hl(0, 'Statement', {
@@ -43,11 +43,11 @@ return {
 			vim.api.nvim_set_hl(0, 'Conditional', { link = 'Statement' })
 
 			vim.api.nvim_set_hl(0, 'Function', {
-				fg = '#d3c6ff',
+				fg = '#d4c6ff',
 				bold = true
 			})
 			vim.api.nvim_set_hl(0, 'Macro', {
-				fg = '#d3c6ff',
+				fg = '#d4c6ff',
 				italic = true
 			})
 			vim.api.nvim_set_hl(0, '@function.macro', { link = 'Macro' })
@@ -64,13 +64,13 @@ return {
 				italic = true
 			})
 
-			vim.api.nvim_set_hl(0, 'Operator', { fg = '#f2efff' })
-			vim.api.nvim_set_hl(0, 'Delimiter', { fg = '#f2efff' })
+			vim.api.nvim_set_hl(0, 'Operator', { fg = '#f3efff' })
+			vim.api.nvim_set_hl(0, 'Delimiter', { fg = '#f3efff' })
 			vim.api.nvim_set_hl(0, '@punctuation.bracket', { link = 'Delimiter' })
 			vim.api.nvim_set_hl(0, '@punctuation.delimiter', { link = 'Delimiter' })
 
 			vim.api.nvim_set_hl(0, 'Comment', {
-				fg = '#9b99a5',
+				fg = '#9c99a5',
 				italic = true
 			})
 

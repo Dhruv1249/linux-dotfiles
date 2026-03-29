@@ -37,3 +37,8 @@ vim.keymap.set("n", "<C-S-v>", '"+p', { desc = "Paste from clipboard" })
 vim.keymap.set("i", "<C-S-v>", '<C-r>+', { desc = "Paste in insert mode" })
 
 vim.keymap.set("n", "<leader>md", ":RenderMarkdown toggle<CR>")
+
+vim.keymap.set("n", "<leader>sm", function()
+	require("supermaven-nvim.api").toggle()
+end, { desc = "Toggle Supermaven" })
+
