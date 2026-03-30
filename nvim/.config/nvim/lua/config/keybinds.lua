@@ -48,3 +48,12 @@ vim.keymap.set("n", "<A-S-Down>", "yyp", { desc = "Duplicate line down" })
 
 -- Duplicate line up (Alt+Shift+Up)
 vim.keymap.set("n", "<A-S-Up>", "yyP", { desc = "Duplicate line up" })
+
+-- Toggle wrap
+vim.keymap.set("n", "<leader>w", function()
+  vim.opt.wrap = not vim.opt.wrap:get()
+end, { desc = "Toggle wrap" })
+
+-- Cursor now treats wrapped lines as a single line
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")

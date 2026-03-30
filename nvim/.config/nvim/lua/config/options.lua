@@ -28,3 +28,11 @@ vim.api.nvim_create_autocmd("FileType", {
 		pcall(vim.treesitter.start)
 	end,
 })
+
+-- 4. Wrap settings
+vim.opt.wrap = true
+vim.opt.linebreak = true   -- wrap at word boundaries
+vim.opt.breakindent = true -- indent wrapped lines nicely
+vim.opt.showbreak = "↪ "   -- symbol for wrapped line
+vim.opt.sidescrolloff = 8
+vim.opt.scrolloff = 8 
