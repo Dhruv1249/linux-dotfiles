@@ -42,3 +42,9 @@ vim.keymap.set("n", "<leader>sm", function()
 	require("supermaven-nvim.api").toggle()
 end, { desc = "Toggle Supermaven" })
 
+
+-- Duplicate line down (Alt+Shift+Down)
+vim.keymap.set("n", "<A-S-Down>", "yyp", { desc = "Duplicate line down" })
+
+-- Duplicate line up (Alt+Shift+Up)
+vim.keymap.set("n", "<A-S-Up>", "yyP", { desc = "Duplicate line up" })
