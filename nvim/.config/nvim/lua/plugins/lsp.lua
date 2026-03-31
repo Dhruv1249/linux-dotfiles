@@ -37,18 +37,18 @@ return {
 				"docker_compose_language_service",
 				"terraformls",
 
-        -- Markdown
-        "marksman",
+				-- Markdown
+				"marksman",
 
-        -- C/C++
-        "clangd",
+				-- C/C++
+				"clangd",
 
-        -- Toml
-        "taplo",
+				-- Toml
+				"taplo",
 
 				-- Extras
 				"qmlls",
-        "eslint",
+				"eslint",
 			},
 
 			automatic_installation = true,
@@ -71,6 +71,24 @@ return {
 							Lua = {
 								diagnostics = {
 									globals = { "vim" },
+								},
+							},
+						},
+					})
+				end,
+
+				["rust_analyzer"] = function()
+					lspconfig.rust_analyzer.setup({
+						capabilities = capabilities,
+						settings = {
+							["rust-analyzer"] = {
+								procMacro = {
+									enable = true,
+								},
+								cargo = {
+									buildScripts = {
+										enable = true,
+									},
 								},
 							},
 						},
