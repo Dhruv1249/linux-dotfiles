@@ -94,6 +94,8 @@ return {
 						},
 					})
 				end,
+				-- Explicitly ignore jdtls here so the default handler skips it
+				["jdtls"] = function() end,
 			},
 		})
 

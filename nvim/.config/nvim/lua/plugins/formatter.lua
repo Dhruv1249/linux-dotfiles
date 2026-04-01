@@ -25,7 +25,7 @@ return {
 		vim.keymap.set("n", "<leader>f", function()
 			conform.format({
 				async = true,
-				lsp_fallback = false, -- IMPORTANT: only use formatters
+				lsp_fallback = true, -- Had to turn it on for jdtls
 			})
 		end, { desc = "Format buffer" })
 
