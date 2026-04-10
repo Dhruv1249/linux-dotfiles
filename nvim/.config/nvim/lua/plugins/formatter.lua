@@ -63,11 +63,14 @@ return {
 				-- Terraform
 				terraform = { "terraform_fmt" },
 
-        -- Toml
+				-- Toml
 				toml = { "taplo" },
 
-        -- Markdown
+				-- Markdown
 				markdown = { "prettier" },
+
+				-- ASM
+				asm = { "asmfmt" },
 			},
 
 			-- =========================

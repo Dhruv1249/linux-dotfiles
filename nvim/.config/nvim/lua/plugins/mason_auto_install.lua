@@ -13,6 +13,7 @@ return{
         "shfmt",
         "rustfmt",
         "terraform",
+        "asmfmt",
 
         -- Linters (optional)
         "eslint_d",

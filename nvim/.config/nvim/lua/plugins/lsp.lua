@@ -49,6 +49,9 @@ return {
 				-- Extras
 				"qmlls",
 				"eslint",
+
+				-- ASM
+				"asm_lsp",
 			},
 
 			automatic_installation = true,
@@ -92,6 +95,17 @@ return {
 								},
 							},
 						},
+					})
+				end,
+
+				["asm_lsp"] = function()
+					lspconfig.asm_lsp.setup({
+						capabilities = capabilities,
+						filetypes = { "asm", "s", "S" }, -- important
+						on_attach = function(client, bufnr)
+							client.server_capabilities.diagnosticProvider = nil
+							vim.diagnostic.disable(bufnr)
+						end,
 					})
 				end,
 				-- Explicitly ignore jdtls here so the default handler skips it
