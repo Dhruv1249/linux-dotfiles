@@ -17,11 +17,6 @@ spawn-at-startup "dms" "run"
 // Spawning playerctld daemon
 spawn-at-startup "playerctld" "daemon"
 
-
-window-rule {
-    match app-id="steam"
-    open-floating true
-}
 input {
     keyboard {
         xkb {
@@ -267,6 +262,7 @@ layout {
         // You can also change the shadow color and opacity.
         color "#0007"
     }
+
 
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.
     // You can think of them as a kind of outer gaps. They are set in logical pixels.
@@ -644,7 +640,7 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 
     // Personal entry for opening brave, it enables 2 finger scroll and disbale kwallet
-    Super+w hotkey-overlay-title="Open brave" { spawn "brave" "--enable-features=TouchpadOverscrollHistoryNavigation" "--password-store=basic" "--enable-blink-features=MiddleClickAutoscroll";  }
+    Super+w hotkey-overlay-title="Open brave" { spawn "brave-origin-nightly" "--enable-features=TouchpadOverscrollHistoryNavigation" "--password-store=basic" "--enable-blink-features=MiddleClickAutoscroll";  }
     Mod+Shift+W { spawn "dms" "ipc" "wallpaperCarousel" "toggle"; }
 }
 
