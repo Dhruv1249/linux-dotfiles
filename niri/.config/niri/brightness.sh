@@ -52,6 +52,9 @@ elif [ "$1" = "-" ]; then
 
     echo "$BRIGHTNESS" >"$CONFIG_PATH"
   fi
+elif [ "$1" = "0" ]; then
+  pkill gammastep 2>/dev/null
+  echo "0" >"$CONFIG_PATH"
 
 else
   echo "Usage: $0 [+|-]"

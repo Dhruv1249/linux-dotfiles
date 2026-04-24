@@ -16,6 +16,11 @@ spawn-at-startup "dms" "run"
 
 // Spawning playerctld daemon
 spawn-at-startup "playerctld" "daemon"
+spawn-at-startup "bash" "-c" "$HOME/.config/niri/brightness.sh 0";
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
 
 input {
     keyboard {
