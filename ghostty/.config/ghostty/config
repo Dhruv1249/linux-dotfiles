@@ -82,14 +82,15 @@ keybind = shift+up=jump_to_prompt:-1
 keybind = shift+down=jump_to_prompt:1
 
 # Cursor Shaders
-# Pick ONE (or combine multiple):
 custom-shader = shaders/cursor_tail.glsl       
 # custom-shader = shaders/cursor_warp.glsl      
 custom-shader = shaders/cursor_sweep.glsl      
 
-# Optional pulse effects (great with vim mode changes):
+# Pulse effects:
 custom-shader = shaders/ripple_cursor.glsl
 custom-shader = shaders/sonic_boom_cursor.glsl
 
 # Required if you use the default line cursor:
 custom-shader-animation = always
+
+theme = "dankcolors"
