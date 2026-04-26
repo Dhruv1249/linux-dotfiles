@@ -7,15 +7,15 @@
       "left": 2
     },
     "color": {
-      "1": "38;2;157;212;158",
-      "2": "38;2;184;204;181"
+      "1": "38;2;{{colors.primary.default.red}};{{colors.primary.default.green}};{{colors.primary.default.blue}}",
+      "2": "38;2;{{colors.secondary.default.red}};{{colors.secondary.default.green}};{{colors.secondary.default.blue}}"
     }
   },
   "display": {
     "separator": " : ",
     "color": {
-      "keys": "38;2;157;212;158",
-      "title": "38;2;161;206;214"
+      "keys": "38;2;{{colors.primary.default.red}};{{colors.primary.default.green}};{{colors.primary.default.blue}}",
+      "title": "38;2;{{colors.tertiary.default.red}};{{colors.tertiary.default.green}};{{colors.tertiary.default.blue}}"
     }
   },
   "modules": [

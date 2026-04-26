@@ -1,0 +1,5 @@
+[config]
+
+[templates.fastfetch]
+input_path = '/home/dhruv/.config/matugen/templates/fastfetch.jsonc'
+output_path = '/home/dhruv/.config/fastfetch/config.jsonc'
