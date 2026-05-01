@@ -22,6 +22,28 @@ debug {
     honor-xdg-activation-with-invalid-serial
 }
 
+blur {
+    // off
+    passes 3
+    offset 3.0
+    noise 0.02
+    saturation 1.5
+}
+
+window-rule {
+    background-effect {
+        blur true
+        xray true
+    }
+}
+
+layer-rule {
+    background-effect {
+        blur true
+        xray true
+    }
+}
+
 input {
     keyboard {
         xkb {
@@ -648,9 +670,6 @@ binds {
     Super+w hotkey-overlay-title="Open brave" { spawn "brave-origin-nightly" "--enable-features=TouchpadOverscrollHistoryNavigation" "--password-store=basic" "--enable-blink-features=MiddleClickAutoscroll";  }
     Mod+Shift+W { spawn "dms" "ipc" "wallpaperCarousel" "toggle"; }
 }
-
-
-
 
 // Add to the end of ~/.config/niri/config.kdl
 include "dms/colors.kdl"
