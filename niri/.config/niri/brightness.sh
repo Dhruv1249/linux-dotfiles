@@ -54,7 +54,7 @@ elif [ "$1" = "-" ]; then
   fi
 elif [ "$1" = "0" ]; then
   pkill gammastep 2>/dev/null
-  echo "0" >"$CONFIG_PATH"
+  echo "10" >"$CONFIG_PATH"
 
 else
   echo "Usage: $0 [+|-]"

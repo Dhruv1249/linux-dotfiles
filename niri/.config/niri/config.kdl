@@ -37,12 +37,12 @@ window-rule {
     }
 }
 
-layer-rule {
-    background-effect {
-        blur true
-        xray true
-    }
-}
+// layer-rule {
+//     background-effect {
+//         blur true
+//         xray true
+//     }
+// }
 
 input {
     keyboard {
