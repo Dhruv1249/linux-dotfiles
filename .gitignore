@@ -48,3 +48,5 @@ fish/.config/fish/fish_plugins
 
 niri/.config/niri/config.kdl.backup*
 /fish/.config/fish/fish_plugins
+/fish/.config/fish/functions/__bass.py
+/fish/.config/fish/functions/bass.fish
