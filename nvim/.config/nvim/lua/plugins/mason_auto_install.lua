@@ -11,7 +11,7 @@ return{
         "black",
         "isort",
         "shfmt",
-        "rustfmt",
+        -- "rustfmt",
         "terraform",
         "asmfmt",
 

@@ -50,9 +50,6 @@ return {
 				json = { "prettier" },
 				yaml = { "prettier" },
 
-				-- Rust
-				rust = { "rustfmt" },
-
 				-- Shell
 				sh = { "shfmt" },
 				bash = { "shfmt" },
