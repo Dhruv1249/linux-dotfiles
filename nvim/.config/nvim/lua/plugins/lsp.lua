@@ -28,6 +28,7 @@ return {
 				-- Backend
 				"pyright",
 				"bashls",
+				"gopls",
 
 				-- Rust
 				"rust_analyzer",
@@ -92,6 +93,32 @@ return {
 									buildScripts = {
 										enable = true,
 									},
+								},
+							},
+						},
+					})
+				end,
+
+				-- Go
+				["gopls"] = function()
+					lspconfig.gopls.setup({
+						capabilities = capabilities,
+						settings = {
+							gopls = {
+								staticcheck = true,
+
+								-- stricter formatting style
+								gofumpt = true,
+
+								-- optional but nice
+								hints = {
+									assignVariableTypes = true,
+									compositeLiteralFields = true,
+									compositeLiteralTypes = true,
+									constantValues = true,
+									functionTypeParameters = true,
+									parameterNames = true,
+									rangeVariableTypes = true,
 								},
 							},
 						},

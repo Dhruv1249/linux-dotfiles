@@ -68,6 +68,9 @@ return {
 
 				-- ASM
 				asm = { "asmfmt" },
+
+        -- Go
+        go = { "goimports" },
 			},
 
 			-- =========================

@@ -36,3 +36,5 @@ vim.opt.breakindent = true -- indent wrapped lines nicely
 vim.opt.showbreak = "↪ "   -- symbol for wrapped line
 vim.opt.sidescrolloff = 8
 vim.opt.scrolloff = 8 
+
+-- vim.lsp.codelens.enable(true)
