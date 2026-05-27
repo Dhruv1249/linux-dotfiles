@@ -38,8 +38,6 @@ return {
       ["ii"] = "@conditional.inner",
       ["al"] = "@loop.outer",
       ["il"] = "@loop.inner",
-      ["ac"] = "@call.outer",
-      ["ic"] = "@call.inner",
       ["af"] = "@function.outer",
       ["if"] = "@function.inner",
       ["ac"] = "@class.outer",
