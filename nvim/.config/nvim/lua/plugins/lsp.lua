@@ -135,8 +135,10 @@ return {
 						end,
 					})
 				end,
-				-- Explicitly ignore jdtls here so the default handler skips it
+				-- Explicitly ignore jdtls and copilot servers so the default handler skips them
 				["jdtls"] = function() end,
+				["copilot"] = function() end,
+				["copilot_ls"] = function() end,
 			},
 		})
 

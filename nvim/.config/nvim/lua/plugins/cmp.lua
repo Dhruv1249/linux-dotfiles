@@ -27,7 +27,7 @@ return {
 				clear_suggestion = "<C-]>",
 				accept_word = "<C-j>",
 			},
-      ignore_filetypes = { ".env" , "dotenv" },
+		    ignore_filetypes = { ".env" , "dotenv" },
 		})
 
 		cmp.setup({
