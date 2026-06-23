@@ -1,8 +1,8 @@
 -- lua/config/options.lua
 -- 1. Indentation (VS Code Style)
 vim.opt.expandtab = true -- Use spaces instead of tabs
-vim.opt.shiftwidth = 2 -- Shift 2 spaces when tabbing
-vim.opt.tabstop = 2 -- 1 tab == 2 spaces
+vim.opt.shiftwidth = 4 -- Shift 2 spaces when tabbing
+vim.opt.tabstop = 4 -- 1 tab == 2 spaces
 vim.opt.smartindent = true -- Auto-indent new lines
 vim.opt.autoindent = true
 -- 2. UI Behavior
