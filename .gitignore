@@ -47,6 +47,7 @@ fish/.config/.config/fish/conf.d/nvm.fish
 fish/.config/fish/completions/tide.fish
 fish/.config/fish/fish_plugins
 /fish/.config/fish/fish_plugins
+
 # =========================
 #  NIRI
 # =========================
@@ -55,3 +56,9 @@ niri/.config/niri/config.kdl.backup*
 /fish/.config/fish/fish_plugins
 /fish/.config/fish/functions/__bass.py
 /fish/.config/fish/functions/bass.fish
+/niri/.config/niri/dms/colors.kdl
+/hypr/.config/hypr/dms/colors.conf
+/ghostty/.config/ghostty/themes/dankcolors
+/foot/.config/foot/dank-colors.ini
+/DankMaterialShell/.config/DankMaterialShell/firefox.css
+/DankMaterialShell/.config/DankMaterialShell/plugin_settings.json

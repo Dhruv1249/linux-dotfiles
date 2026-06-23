@@ -8,6 +8,8 @@ if status is-interactive
 
     # Better ls
     alias ls='eza --icons --group-directories-first -1'
+    alias vi='vim'
+    alias vim='nvim'
 
     # Abbrs
     abbr lg 'lazygit'
