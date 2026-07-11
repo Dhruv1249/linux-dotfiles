@@ -7,15 +7,15 @@
       "left": 2
     },
     "color": {
-      "1": "38;2;179;197;255",
-      "2": "38;2;193;198;221"
+      "1": "38;2;208;188;255",
+      "2": "38;2;204;194;220"
     }
   },
   "display": {
     "separator": " : ",
     "color": {
-      "keys": "38;2;179;197;255",
-      "title": "38;2;225;187;220"
+      "keys": "38;2;208;188;255",
+      "title": "38;2;204;194;220"
     }
   },
   "modules": [
@@ -64,14 +64,16 @@
       "format": "{pretty-name}"
     },
     {
-      "type": "cpu",
+      "type": "command",
       "key": "  cpu",
-      "format": "{name}"
+      "text": "awk -F': ' '/model name/ {print $2; exit}' /proc/cpuinfo | sed -E 's/^([0-9]+th Gen )?Intel\\(R\\) Core\\(TM\\) /Intel Core /; s/ @.*//'"
+
+
     },
     {
       "type": "gpu",
       "key": "󰢮  gpu",
-      "format": "{name}"
+      "format": "{name:22}"
     },
     {
       "type": "memory",
