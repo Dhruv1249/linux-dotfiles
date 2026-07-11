@@ -56,16 +56,16 @@ install_pacman_packages() {
         firefox fish fzf gammastep ghostty git github-cli go gparted grub-btrfs gthumb \
         gvfs gvfs-mtp imagemagick inotify-tools iwd kimageformats lazygit \
         libva-nvidia-driver libva-utils lld lua51 luarocks man-db matugen mesa-utils \
-        mpv nasm neovim networkmanager niri noto-fonts-cjk noto-fonts-emoji ntfs-3g \
-        onlyoffice-bin pacman-contrib pavucontrol pipewire pipewire-alsa pipewire-jack \
+        mpv eza btop nasm neovim networkmanager niri noto-fonts-cjk noto-fonts-emoji ntfs-3g \
+        pacman-contrib pavucontrol pipewire pipewire-alsa pipewire-jack \
         pipewire-pulse playerctl plocate polkit-gnome poppler psensor qt5-multimedia \
         qt6-multimedia-ffmpeg qt6-virtualkeyboard reflector ripgrep rustup sddm \
         sof-firmware stow sudo thunar thunar-archive-plugin timeshift tmux \
-        ttf-cascadia-code ttf-fira-code ttf-jetbrains-mono tty-clock tumbler unzip vim \
+        ttf-cascadia-code ttf-fira-code ttf-jetbrains-mono tumbler unzip vim \
         virt-manager wf-recorder wireplumber wl-mirror xarchiver xdg-desktop-portal-wlr \
-        xdg-user-dirs xwayland-satellite yay yazi zip zoxide zram-generator 7zip foot \
+        xdg-user-dirs xwayland-satellite yazi zip zoxide zram-generator 7zip foot \
         lua-luarocks lua54 luajit noto-fonts xorg-xwayland zstd \
-        qemu-desktop \
+        qemu-desktop tree-sitter-cli\
         nvidia-utils lib32-nvidia-utils nvidia-settings egl-wayland
 }
 
@@ -73,7 +73,7 @@ install_aur_packages() {
     log "Installing AUR packages..."
     yay -S --needed --noconfirm \
         antigravity-cli brave-origin-nightly-bin docker-desktop \
-        gitmux mpvpaper ttf-courier-prime 
+        gitmux mpvpaper ttf-courier-prime onlyoffice-bin tty-clock 
 }
 
 # ---------------------------------------------------------------------------
@@ -118,7 +118,7 @@ enable_services() {
     )
     for svc in "${services[@]}"; do
         if systemctl list-unit-files | grep -q "^${svc}"; then
-            sudo systemctl enable --now "$svc" 2>/dev/null || warn "Could not enable $svc"
+            sudo systemctl enable "$svc" 2>/dev/null || warn "Could not enable $svc"
         else
             warn "$svc not found, skipping"
         fi
