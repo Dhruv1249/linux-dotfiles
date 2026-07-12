@@ -62,8 +62,8 @@ window-padding-x = 25
 window-padding-y = 25
 
 # Window Opacity
-background-blur = true
-background-opacity = 0.78
+# background-blur = true
+# background-opacity = 0.78
 
 # Cursor Styling
 cursor-style = bar
