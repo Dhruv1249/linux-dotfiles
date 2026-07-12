@@ -17,7 +17,10 @@ require("config.diagnostics")
 vim.api.nvim_create_autocmd("User", {
     pattern = "VeryLazy",
     callback = function()
-        vim.schedule(highlights.apply)
+        vim.schedule(function()
+            vim.cmd.colorscheme("dms")
+            highlights.apply()
+        end)
     end,
 })
 

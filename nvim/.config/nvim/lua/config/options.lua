@@ -37,4 +37,5 @@ vim.opt.showbreak = "↪ "   -- symbol for wrapped line
 vim.opt.sidescrolloff = 8
 vim.opt.scrolloff = 8 
 
+vim.opt.laststatus = 0
 -- vim.lsp.codelens.enable(true)
