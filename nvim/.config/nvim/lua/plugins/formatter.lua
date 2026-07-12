@@ -37,6 +37,8 @@ return {
 				-- Lua
 				lua = { "stylua" },
 
+                rust = { "rustfmt" },
+
 				-- Python
 				python = { "isort", "black" },
 

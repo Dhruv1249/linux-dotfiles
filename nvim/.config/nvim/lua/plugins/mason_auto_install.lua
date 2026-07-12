@@ -6,18 +6,18 @@ return{
     require("mason-tool-installer").setup({
       ensure_installed = {
         -- Formatters
-        -- "stylua",
-        -- "prettier",
-        -- "black",
-        -- "isort",
-        -- "shfmt",
-        -- -- "rustfmt",
-        -- "terraform",
-        -- "asmfmt",
+        "stylua",
+        "prettier",
+        "black",
+        "isort",
+        "shfmt",
+        -- "rustfmt",
+        "terraform",
+        "asmfmt",
         --
         -- -- Linters (optional)
-        -- "eslint_d",
-        -- "pylint",
+        "eslint_d",
+        "pylint",
       },
 
       run_on_start = true,
