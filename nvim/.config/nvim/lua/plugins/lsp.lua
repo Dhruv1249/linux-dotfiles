@@ -16,43 +16,43 @@ return {
 			-- A list of servers to automatically install
 			ensure_installed = {
 				-- Lua
-				-- "lua_ls",
+				"lua_ls",
 				--
 				-- -- Web
-				-- "ts_ls",
-				-- "html",
-				-- "cssls",
-				-- "jsonls",
-				-- "yamlls",
+				"ts_ls",
+				"html",
+				"cssls",
+				"jsonls",
+				"yamlls",
 
 				-- Backend
-				-- "pyright",
-				-- "bashls",
+				"pyright",
+				"bashls",
 				-- "gopls",
 				--
 				-- -- Rust
-				-- "rust_analyzer",
+				"rust_analyzer",
 				--
 				-- -- DevOps / Infra
-				-- "dockerls",
-				-- "docker_compose_language_service",
-				-- "terraformls",
+				"dockerls",
+				"docker_compose_language_service",
+				"terraformls",
 				--
 				-- -- Markdown
-				-- "marksman",
+				"marksman",
 				--
 				-- -- C/C++
-				-- "clangd",
+				"clangd",
 				--
 				-- -- Toml
-				-- "taplo",
+				"taplo",
 				--
 				-- -- Extras
 				-- "qmlls",
-				-- "eslint",
+				"eslint",
 				--
 				-- -- ASM
-				-- "asm_lsp",
+				"asm_lsp",
 			},
 
 			automatic_installation = true,
