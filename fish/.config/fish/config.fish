@@ -8,6 +8,8 @@ if status is-interactive
 
     # Better ls
     alias ls='eza --icons --group-directories-first -1'
+
+
     alias vi='vim'
     alias vim='nvim'
 
@@ -29,6 +31,7 @@ if status is-interactive
     abbr gco 'git checkout'
     abbr gsh 'git show'
 
+    abbr tt 'tmux new-session -A -s main'
     abbr l 'ls'
     abbr ll 'ls -l'
     abbr la 'ls -a'
