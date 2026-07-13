@@ -50,7 +50,6 @@
 
 # Shell and Command
 command = fish
-command = tmux new-session -A -s main
 shell-integration = detect
 shell-integration-features = no-cursor,sudo,title
 
