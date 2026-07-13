@@ -64,14 +64,14 @@
       "format": "{pretty-name}"
     },
     {
-      "type": "cpu",
+      "type": "command",
       "key": "  cpu",
-      "format": "{name}"
+      "text": "awk -F': ' '/model name/ {print $2; exit}' /proc/cpuinfo | sed -E 's/^([0-9]+th Gen )?Intel\\(R\\) Core\\(TM\\) /Intel Core /; s/ @.*//'"
     },
     {
       "type": "gpu",
       "key": "󰢮  gpu",
-      "format": "{name}"
+      "format": "{name:22}"
     },
     {
       "type": "memory",
