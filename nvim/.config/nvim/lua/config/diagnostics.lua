@@ -14,6 +14,8 @@ vim.api.nvim_create_autocmd("BufReadPre", {
 })
 vim.o.updatetime = 250
 
+-- vim.keymap.set("n", "<leader>d", "<cmd>lua vim.diagnostic.open_float(nil, { focusable = false, border = "rounded", source = 'always' })<CR>", { noremap = true, silent = true })
+
 vim.api.nvim_create_autocmd("CursorHold", {
 	callback = function(args)
     if vim.bo[args.buf].filetype == "asm" then
@@ -21,7 +23,7 @@ vim.api.nvim_create_autocmd("CursorHold", {
 		end
 
 		vim.diagnostic.open_float(nil, {
-			focusable = true,
+			focusable = false,
 			border = "rounded",
 			source = "always",
 		})
