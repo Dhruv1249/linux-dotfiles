@@ -66,3 +66,6 @@ if status is-interactive
         printf "\e]133;D\a"
     end
 end
+
+# uv
+fish_add_path "/home/dhruv/.local/bin"
