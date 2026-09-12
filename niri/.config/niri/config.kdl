@@ -45,6 +45,12 @@ window-rule {
 //     }
 // }
 
+ layer-rule {
+    match namespace="linux-wallpaperengine"
+    place-within-backdrop true
+}
+
+
 input {
     keyboard {
         xkb {
@@ -668,7 +674,7 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 
     // Personal entry for opening brave, it enables 2 finger scroll and disbale kwallet
-    Super+w hotkey-overlay-title="Open brave" { spawn "brave-origin-nightly" "--enable-features=TouchpadOverscrollHistoryNavigation" "--password-store=basic" ;  }
+    Super+w hotkey-overlay-title="Open brave" { spawn "zen-browser" ; }
     Mod+Shift+W { spawn "dms" "ipc" "wallpaperCarousel" "toggle"; }
 }
 
