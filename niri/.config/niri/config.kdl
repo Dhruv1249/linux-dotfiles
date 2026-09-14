@@ -16,7 +16,7 @@ spawn-at-startup "dms" "run"
 
 // Spawning playerctld daemon
 spawn-at-startup "playerctld" "daemon"
-spawn-at-startup "bash" "-c" "$HOME/.config/niri/brightness.sh 0";
+spawn-at-startup "bash" "-c" "$HOME/.config/niri/brightness.sh --init";
 
 debug {
     honor-xdg-activation-with-invalid-serial
@@ -34,7 +34,7 @@ blur {
 window-rule {
     background-effect {
         blur true
-        xray true
+        // xray true
     }
 }
 
@@ -442,13 +442,18 @@ binds {
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh +"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh -"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh --brightness +"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh --brightness -"; }
+    Mod+P allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh --temperature -"; }
+    Mod+O allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh --temperature +" ; }
+    Mod+Alt+T allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh --temperature --toggle" ; }
+    
+
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
-    Mod+O repeat=false { toggle-overview; }
+    // Mod+O repeat=false { toggle-overview; }
 
     Mod+Q repeat=false { close-window; }
 
