@@ -444,8 +444,8 @@ binds {
     // but you need to manually put each argument in separate "" quotes.
     XF86MonBrightnessUp allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh --brightness +"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh --brightness -"; }
-    Mod+P allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh --temperature -"; }
-    Mod+O allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh --temperature +" ; }
+    Mod+O allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh --temperature -"; }
+    Mod+P allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh --temperature +" ; }
     Mod+Alt+T allow-when-locked=true { spawn "bash" "-c" "$HOME/.config/niri/brightness.sh --temperature --toggle" ; }
     
 
