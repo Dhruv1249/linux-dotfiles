@@ -69,6 +69,7 @@ function M.apply()
 	------------------------------------------------------------------
 
 	hl(0, "NormalFloat", {
+
 		fg = normal_float.fg,
 		bg = normal_float.bg,
 	})
